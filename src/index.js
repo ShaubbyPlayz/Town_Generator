@@ -1,4 +1,4 @@
-// ----- IMPORTS -----
+  // ----- IMPORTS -----
 import "./styles.css";
 import {generateName} from "./utils.mjs";
 import configData from './names.json';
