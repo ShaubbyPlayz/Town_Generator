@@ -1,8 +1,10 @@
+// ----- IMPORTS -----
 import "./styles.css";
 import {generateName} from "./utils.mjs";
-//var names = JSON.parse("./names.json");
+import configData from './names.json';
 
-//console.log(names[2]);
+// Import name.json
+var names = JSON.parse(JSON.stringify(configData));
 
-var name = [["a", "b", "c"], ["d", "e", "f"]];
-console.log(generateName(name));
+console.log(generateName(names.fDwarf));
+
