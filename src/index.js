@@ -1,10 +1,12 @@
   // ----- IMPORTS -----
 import "./styles.css";
-import {generateName} from "./utils.mjs";
+import {coin, generateName} from "./utils.mjs";
+import {Rune} from "./rune.mjs";
 import configData from './names.json';
 
 // Import name.json
 var names = JSON.parse(JSON.stringify(configData));
 
-console.log(generateName(names.fDwarf));
+// ---------- RUNE GENERATOR ----------
 
+console.log(Rune());

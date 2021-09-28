@@ -4,7 +4,7 @@
 
  export function generateName(names) {
 
-  // First and last name arrays 
+  // First and last name arrays
   var firstnames = names[0];
   var lastnames = names[1];
 
@@ -25,6 +25,17 @@
   return fullname;
 
 };
+// ---------- COIN ----------
+export function coin(chance = 1/2) {
+
+  if (Math.random() > chance) {
+    return 0;
+  } else {
+    return 1;
+  }
+
+}
+
 
 // ---------- Character Class ----------
 
