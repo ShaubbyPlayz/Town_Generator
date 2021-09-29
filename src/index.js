@@ -13,20 +13,33 @@ var names = JSON.parse(JSON.stringify(configData));
 
 // ---------- RUNE GENERATOR ----------
 
+// Rune
 var rune = Rune();
 
+// Begin Path
 ctx.beginPath();
 
-if(rune[0][0] == 1) ctx.rect(0, 0, 10, 10); // Top Left
-if(rune[0][2] == 1) ctx.rect(20, 0, 30, 10); // Top Middle
-if(rune[0][4] == 1) ctx.rect(40, 0, 50, 10); // Top Right
+// ----- Corners -----
 
-if(rune[2][0] == 1) ctx.rect(0, 20, 10, 30); // Top Left
-if(rune[2][2] == 1) ctx.rect(20, 20, 30, 30); // Top Middle
-if(rune[2][4] == 1) ctx.rect(40, 20, 50, 30); // Top Right
+// Top
+if(rune[0][0] === 1) ctx.fillRect(0, 0, 10, 10); // Top Left
+if(rune[0][2] === 1) ctx.fillRect(30, 0, 10, 10); // Top Middle
+if(rune[0][4] === 1) ctx.fillRect(60, 0, 10, 10); // Top Right
 
-if(rune[4][0] == 1) ctx.rect(0, 40, 10, 50); // Top Left
-if(rune[4][2] == 1) ctx.rect(20, 40, 30, 50); // Top Middle
-if(rune[4][4] == 1) ctx.rect(40, 40, 50, 50); // Top Right
+// Middle
+if(rune[2][0] === 1) ctx.fillRect(0, 30, 10, 10); // Middle Left
+if(rune[2][2] === 1) ctx.fillRect(30, 30, 10, 10); // Middle Middle
+if(rune[2][4] === 1) ctx.fillRect(60, 30, 10, 10); // Middle Right
 
-ctx.endPath();
+// Bottom
+if(rune[4][0] === 1) ctx.fillRect(0, 60, 10, 10); // Bottom Left
+if(rune[4][2] === 1) ctx.fillRect(30, 60, 10, 10); // Bottom Middle
+if(rune[4][4] === 1) ctx.fillRect(60, 60, 10, 10); // Bottom Right
+
+// ----- Horizontal Connectors -----
+
+if(rune[0][1] == 1) ctx.fillRect(10,)
+
+
+
+ctx.closePath();
